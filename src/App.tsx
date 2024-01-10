@@ -1,22 +1,31 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
-import logo from './logo.svg';
 
-class App extends React.Component {
-  public render() {
+const App: React.FC = () => {
+  const [input, setInput] = useState('');
+  const [messages, setMessages] = useState([]);
+
+  const handleSend = async () => {
+      // Logic to send message to OpenAI and receive response
+  };
+
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+      <div className="chat-container">
+      <div className="chat-window">
+            {/* messages && {messages.map((message, index) => (
+                <div key={index} className={`message ${message.sender}`}>
+                    {message.text}
+                </div>
+            ))} */}
+        </div>
+          <textarea value={input} onChange={(e) => setInput(e.target.value)} />
+          <button onClick={handleSend}>Send </button>
+      </div>
       </div>
     );
-  }
 }
 
 export default App;

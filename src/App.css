@@ -2,27 +2,22 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.chat-container {
+  width: 100%; /* Full width */
+  max-width: 600px; /* Maximum width of the chat container */
+  margin: auto; /* Center the container */
+  border: 1px solid #ddd; /* A light border for the container */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* A subtle shadow for depth */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  overflow: hidden; /* Ensures no overflow */
+  background-color: #fff; /* Background color */
+  height: 500px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.chat-window {
+  flex-grow: 1; /* Chat window takes up available space */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px; /* Padding inside the chat window */
 }
